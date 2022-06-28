@@ -13,21 +13,21 @@ while i < len(secretword):
     """While loop checks guess letter by letter to identify 
     if it matches the secret word and prints green box for correctly placed letters"""
     if guess[i] == secretword[i]:
-        result = result + "\U00002B1C"
+        result = result + "\U0001F7E9" 
     else:
         test = False
         n = 0
-        while test != True and n < len(secretword):
+        while test is not True and n < len(secretword):
             """While loops determines whether letter in guess is in the secret word in any other 
             position and prints a yellow box if it is and a white box if it is not"""
             if guess[i] == secretword[n]:
                 
                 test = True
             n = n + 1
-        if test == True:
+        if test is True:
             result = result + "\U0001F7E8"
         else:
-            result = result + "\U0001F7E9"
+            result = result + "\U00002B1C" 
     i = i + 1
 print(result)
 if guess == secretword:

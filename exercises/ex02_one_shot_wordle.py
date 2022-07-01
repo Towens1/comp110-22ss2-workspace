@@ -5,7 +5,7 @@ secretword = "python"
 """Code for user input"""
 guess = input(f"What is your {len(secretword)}-letter guess? ")
 while len(guess) != len(secretword):
-    guess = input("That was not 6 letters! Try again: ")
+    guess = input("That was not {len(secretword)}letters! Try again: ")
 
 i = 0
 result = ""
